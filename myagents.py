@@ -21,7 +21,7 @@ def getWeather(city):
 	print(info)
 	print(weather+"°C")
 
-class Data():
+class Environment():
     def __init__(self,data):
         self.data = data
         self.creator="Sherwin Roger"
@@ -29,7 +29,7 @@ class Data():
     def getData(self):
         print(self.data)
 
-class ChatBot(Data):
+class Agent(Environment):
     def __init__(self,setName,questions):
         super().__init__(questions)
         self.name = setName
@@ -66,5 +66,5 @@ class ChatBot(Data):
 if __name__== '__main__':
     chatbot = input("Hi give a name for me...\n")
     questions=["1) What is the current date and time?","2) Open Calculator","3) What’s the weather like today?","4) Use Translator","5) Who’s your Creator?\n 6)exit"]
-    bot = ChatBot(chatbot,questions)
+    bot = Agent(chatbot,questions)
     bot.Chat()
